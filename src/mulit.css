@@ -1,0 +1,167 @@
+/**
+  * @file mulit.css
+  * @description 主题文件
+  * @author BTMuli <bt-muli@outlook.com>
+  * @since 2023-06-10
+  */
+
+@import "src/mulit.css";
+
+/* root */
+:root {
+    /* 字体 */
+    --font-title: "Genshin", serif;
+    --font-text: "Genshin-Light", sans-serif;
+    --font-code: "Consolas", monospace;
+    /* 背景 */
+    --bg-box: #F1F1F1;
+    --bg-note: #FFFFFF;
+    /* 文字 */
+    --text-color: #282C34;
+    --link-color: #41A5EE;
+    --note-color: #21252B;
+    /* border */
+    --border-title: #323844;
+    --border-quote: #ABB2BF;
+    --border-note: #FFFFFF;
+    --border-code: #959595;
+    --li-mark-color: #5098F6;
+}
+
+/* body */
+body {
+    color: #282C34;
+    height: 100%;
+    font-family: var(--font-text);
+}
+
+/* 编辑区域 */
+#write {
+    font-size: 0.95rem;
+    margin: 1rem auto 0;
+    padding: 30px 30px 100px;
+    position: static;
+    width: 100%;
+}
+
+#write.first-line-indent li {
+    margin-left: 1rem;
+}
+
+/* content */
+h1 {
+    line-height: 1.5;
+    font-family: var(--font-title);
+    text-align: center;
+    border-bottom: 1px solid var(--border-title);
+}
+
+h2,
+h3,
+h4 {
+    line-height: 1.5;
+    font-family: var(--font-title);
+    border-left: 4px solid var(--border-title);
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none !important;
+    transition-duration: 0.3s;
+}
+
+a:hover {
+    color: var(--link-color);
+    text-decoration: underline !important;
+}
+
+li::marker {
+    color: var(--li-mark-color);
+    font-family: var(--font-title);
+    font-size: 16px;
+}
+
+/* front-matter */
+#write pre.md-meta-block {
+    font-family: var(--font-text);
+    font-size: 14px;
+    padding: 1rem;
+    line-height: 1.45rem;
+    background-color: var(--bg-box);
+    border: 0;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+}
+
+/* TOC */
+.md-toc-h2 .md-toc-inner {
+    margin-left: 1rem;
+}
+
+.md-toc-h3 .md-toc-inner {
+    margin-left: 2rem;
+}
+
+.md-toc-h4 .md-toc-inner {
+    margin-left: 3rem;
+}
+
+/* block-quote */
+blockquote {
+    width: 100%;
+    background-color: var(--bg-box);
+    border-left: 4px solid var(--border-quote);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
+/* img ![]() */
+.md-image {
+    max-width: 96%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+}
+
+p > .md-image:only-child:not(.md-img-error) img {
+    margin-left: 2rem;
+}
+
+/* code */
+code {
+    padding: 0.2rem 0.4rem;
+    border: 1px solid var(--border-code);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    margin: 0 0.2rem;
+}
+
+.CodeMirror {
+    font-family: var(--font-code);
+}
+
+/* foot-note */
+sup.md-footnote {
+    margin-left: 0.3rem;
+    background: linear-gradient(145deg, #cfd6dc, #f6ffff);
+    box-shadow: 3px 3px 6px #c4cacf, -3px -3px 6px #ffffff;
+    color: var(--note-color);
+    font-family: var(--font-title);
+}
+
+.md-def-footnote {
+    font-family: var(--font-title);
+}
+
+.md-def-name {
+    padding-left: 1.5ch;
+    padding-right: 1.5ch;
+}

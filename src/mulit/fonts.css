@@ -1,0 +1,19 @@
+/**
+  * @file mulit fonts.css
+  * @description 字体文件
+  * @author BTMuli <bt-muli@outlook.com>
+  * @since 2023-06-10
+  */
+
+@font-face {
+    font-family: "Genshin";
+    src: url("汉仪文黑-85W.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Genshin-Light";
+    src: url("汉仪文黑-55W.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Consolas";
+    src: url("consolas.ttf") format("truetype");
+}
