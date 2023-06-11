@@ -107,7 +107,7 @@
 
 /* property 属性 */
 .cm-s-inner span.cm-property {
-    color: var(--code-color-red) !important;
+    color: var(--code-color-blue) !important;
 }
 
 /* type 类型 */
@@ -116,9 +116,12 @@
 }
 
 /* variable 变量 */
-.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable {
+    color: var(--code-color-red) !important;
+}
+
 .cm-s-inner span.cm-variable-2 {
-    color: var(--code-color-white-1) !important;
+    color: var(--code-color-orange) !important;
 }
 
 .cm-s-inner span.cm-variable-3 {
