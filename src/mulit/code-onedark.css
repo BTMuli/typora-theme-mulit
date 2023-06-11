@@ -76,7 +76,7 @@
 }
 
 .CodeMirror-activeline-background {
-    background: var(--code-color-black-2);
+    background: var(--code-color-black-2) !important;
 }
 
 /* 默认文字 */
