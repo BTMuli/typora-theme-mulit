@@ -18,6 +18,7 @@
     --font-code: "Consolas", "Genshin-Light", sans-serif;
     /* 背景 */
     --bg-box: #F5F7F9;
+    --bg-code-lang: #3B4048;
     /* 文字 */
     --text-color: #282C34;
     --link-color: #41A5EE;
@@ -165,9 +166,11 @@ code {
     font-size: 14px;
 }
 
-.md-fences .code-tooltip {
+#write .code-tooltip {
     font-family: var(--font-code);
     padding: 0 5px;
+    bottom: 0;
+    background: var(--bg-code-lang);
 }
 
 /* foot-note */
