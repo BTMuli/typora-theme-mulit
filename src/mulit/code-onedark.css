@@ -1,0 +1,32 @@
+/*
+ * @file code-onedark.css
+ * @description 代码高亮主题文件
+ * @see https://github.com/one-dark/jetbrains-one-dark-theme
+ * @author BTMuli <bt-muli@outlook.com>
+ * @since 2023-06-11
+ */
+
+.md-fences .code-tooltip {
+    background: #323844;
+    color: #ABB2BF;
+}
+
+.CodeMirror.cm-s-inner {
+    background: #282C34;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #3B4048;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 2px solid #528BFF;
+}
+
+.cm-s-inner {
+    color: #BBBBBB;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C678DD;
+}

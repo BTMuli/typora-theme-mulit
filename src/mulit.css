@@ -1,18 +1,21 @@
-/**
-  * @file mulit.css
-  * @description 主题文件
-  * @author BTMuli <bt-muli@outlook.com>
-  * @since 2023-06-11
-  */
+/*
+ * @file mulit.css
+ * @description 主题文件
+ * @author BTMuli <bt-muli@outlook.com>
+ * @since 2023-06-11
+ */
 
+/* 字体文件 */
 @import "mulit/fonts.css";
+/* 代码高亮主题文件 */
+@import "mulit/code-onedark.css";
 
 /* root */
 :root {
     /* 字体 */
     --font-title: "Genshin", serif;
     --font-text: "Genshin-Light", sans-serif;
-    --font-code: "Consolas", monospace;
+    --font-code: "Consolas", "Genshin-Light", sans-serif;
     /* 背景 */
     --bg-box: #F1F1F1;
     --bg-note: #FFFFFF;
@@ -144,8 +147,22 @@ code {
     margin: 0 0.2rem;
 }
 
-.CodeMirror {
+.CodeMirror pre {
     font-family: var(--font-code);
+}
+
+.md-fences-adv-panel {
+    font-family: var(--font-code);
+}
+
+.CodeMirror.cm-s-inner {
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.md-fences .code-tooltip {
+    font-family: var(--font-code);
+    padding: 0 5px;
 }
 
 /* foot-note */
