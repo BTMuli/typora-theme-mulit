@@ -97,7 +97,7 @@ li::marker {
 
 /* front-matter */
 #write pre.md-meta-block {
-    font-family: var(--font-text);
+    font-family: var(--font-code);
     font-size: 14px;
     padding: 1rem;
     line-height: 1.45rem;
