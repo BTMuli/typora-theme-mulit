@@ -2,31 +2,165 @@
  * @file code-onedark.css
  * @description 代码高亮主题文件
  * @see https://github.com/one-dark/jetbrains-one-dark-theme
+ * @see https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark
  * @author BTMuli <bt-muli@outlook.com>
  * @since 2023-06-11
  */
 
+:root {
+    /* vscode */
+    --code-vscode-white: #ABB2BF;
+    --code-vscode-red: #DE6A73;
+    --code-vscode-purple: #C678DD;
+    --code-vscode-blue: #61AFEF;
+    --code-vscode-green: #98C379;
+    --code-vscode-orange: #D19A66;
+    /* jetbrains */
+    --code-jetbrains-black-1: #282C34;
+    --code-jetbrains-black-2: #2C313C;
+    --code-jetbrains-black-3: #404859;
+    --code-jetbrains-black-4: #3B4048;
+    --code-jetbrains-white: #BBBBBB;
+    --code-jetbrains-red: #EF596F;
+    --code-jetbrains-purple: #D55FDE;
+    --code-jetbrains-blue: #61AFEF;
+    --code-jetbrains-green: #89CA78;
+    --code-jetbrains-orange: #D19A66;
+    /* mulit */
+    --code-color-black-1: var(--code-jetbrains-black-1);
+    --code-color-black-2: var(--code-jetbrains-black-2);
+    --code-color-black-3: var(--code-jetbrains-black-3);
+    --code-color-black-4: var(--code-jetbrains-black-4);
+    --code-color-blue: var(--code-jetbrains-blue);
+    --code-color-cyan: #4999A4;
+    --code-color-green: var(--code-jetbrains-green);
+    --code-color-orange: var(--code-jetbrains-orange);
+    --code-color-purple: var(--code-jetbrains-purple);
+    --code-color-red: var(--code-jetbrains-red);
+    --code-color-white-1: var(--code-jetbrains-white);
+    --code-color-white-2: var(--code-vscode-white);
+}
+
+/* 源代码视图 */
+#typora-source {
+    background: var(--code-color-black-1);
+    color: var(--code-color-white-1);
+}
+
+/* 代码块 右下 lang */
 .md-fences .code-tooltip {
-    background: #323844;
-    color: #ABB2BF;
+    background: var(--code-color-black-1);
+    color: var(--code-color-white-1);
 }
 
+/* 代码块 */
 .CodeMirror.cm-s-inner {
-    background: #282C34;
+    background: var(--code-color-black-1);
 }
 
+/* 行号右侧竖线 */
 .CodeMirror-gutters {
-    border-right: 1px solid #3B4048;
+    border-right: 1px solid var(--code-color-black-4);
 }
 
+/* 代码块内光标 */
 .CodeMirror div.CodeMirror-cursor {
-    border-left: 2px solid #528BFF;
+    border-left: 2px solid var(--code-color-blue);
 }
 
+/* 选中代码块 */
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+    background: var(--code-color-black-3) !important;
+}
+
+.CodeMirror-activeline-background {
+    background: var(--code-color-black-2);
+}
+
+/* 默认文字 */
 .cm-s-inner {
-    color: #BBBBBB;
+    color: var(--code-color-white-1) !important;
 }
 
-.cm-s-inner .cm-keyword {
-    color: #C678DD;
+/* 注释 */
+.cm-s-inner span.cm-comment {
+    color: var(--code-color-white-2) !important;
+}
+
+/* def 定义 */
+.cm-s-inner span.cm-def {
+    color: var(--code-color-orange) !important;
+}
+
+/* string 字符串 */
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+    color: var(--code-color-green) !important;
+}
+
+/* keyword 关键字 */
+.cm-s-inner span.cm-keyword {
+    color: var(--code-color-purple) !important;
+}
+
+/* property 属性 */
+.cm-s-inner span.cm-property {
+    color: var(--code-color-red) !important;
+}
+
+/* type 类型 */
+.cm-s-inner span.cm-type {
+    color: var(--code-color-purple) !important;
+}
+
+/* variable 变量 */
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2 {
+    color: var(--code-color-white-1) !important;
+}
+
+/* builtin 内置 */
+.cm-s-inner span.cm-builtin {
+    color: var(--code-color-blue) !important;
+}
+
+/* operator 操作符 */
+.cm-s-inner span.cm-operator {
+    color: var(--code-color-white-1) !important;
+}
+
+/* number 数字 */
+.cm-s-inner span.cm-number {
+    color: var(--code-color-orange) !important;
+}
+
+/* tag 标签 */
+.cm-s-inner span.cm-tag {
+    color: var(--code-color-red) !important;
+}
+
+/* bracket 括号 */
+.cm-s-inner span.cm-bracket {
+    color: var(--code-color-white-1) !important;
+}
+
+/* attribute 属性 */
+.cm-s-inner span.cm-attribute {
+    color: var(--code-color-orange) !important;
+}
+
+/* meta 元数据 */
+.cm-s-inner span.cm-meta {
+    color: var(--code-color-white-1) !important;
+}
+
+/* qualifier 限定符 */
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-color-orange) !important;
+}
+
+/* atom 原子 */
+.cm-s-inner span.cm-atom {
+    color: var(--code-color-orange) !important;
 }
