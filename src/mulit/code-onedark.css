@@ -9,30 +9,31 @@
 
 :root {
     /* vscode */
-    --code-vscode-white: #ABB2BF;
-    --code-vscode-red: #DE6A73;
-    --code-vscode-purple: #C678DD;
     --code-vscode-blue: #61AFEF;
     --code-vscode-green: #98C379;
     --code-vscode-orange: #D19A66;
+    --code-vscode-purple: #C678DD;
+    --code-vscode-red: #DE6A73;
+    --code-vscode-white: #ABB2BF;
     /* jetbrains */
     --code-jetbrains-black-1: #282C34;
     --code-jetbrains-black-2: #2C313C;
     --code-jetbrains-black-3: #404859;
     --code-jetbrains-black-4: #3B4048;
-    --code-jetbrains-white: #BBBBBB;
-    --code-jetbrains-red: #EF596F;
-    --code-jetbrains-purple: #D55FDE;
     --code-jetbrains-blue: #61AFEF;
+    --code-jetbrains-cyan: #2AB9C4;
     --code-jetbrains-green: #89CA78;
     --code-jetbrains-orange: #D19A66;
+    --code-jetbrains-purple: #D55FDE;
+    --code-jetbrains-red: #EF596F;
+    --code-jetbrains-white: #BBBBBB;
     /* mulit */
     --code-color-black-1: var(--code-jetbrains-black-1);
     --code-color-black-2: var(--code-jetbrains-black-2);
     --code-color-black-3: var(--code-jetbrains-black-3);
     --code-color-black-4: var(--code-jetbrains-black-4);
     --code-color-blue: var(--code-jetbrains-blue);
-    --code-color-cyan: #4999A4;
+    --code-color-cyan: var(--code-jetbrains-cyan);
     --code-color-green: var(--code-jetbrains-green);
     --code-color-orange: var(--code-jetbrains-orange);
     --code-color-purple: var(--code-jetbrains-purple);
@@ -118,6 +119,10 @@
 .cm-s-inner span.cm-variable,
 .cm-s-inner span.cm-variable-2 {
     color: var(--code-color-white-1) !important;
+}
+
+.cm-s-inner span.cm-variable-3 {
+    color: var(--code-color-cyan) !important;
 }
 
 /* builtin 内置 */
