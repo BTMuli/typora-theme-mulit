@@ -17,8 +17,7 @@
     --font-text: "Genshin-Light", sans-serif;
     --font-code: "Consolas", "Genshin-Light", sans-serif;
     /* 背景 */
-    --bg-box: #F1F1F1;
-    --bg-note: #FFFFFF;
+    --bg-box: #F5F7F9;
     /* 文字 */
     --text-color: #282C34;
     --link-color: #41A5EE;
@@ -40,15 +39,20 @@ body {
 
 /* 编辑区域 */
 #write {
-    font-size: 0.95rem;
+    font-size: 16px;
     margin: 1rem auto 0;
     padding: 30px 30px 100px;
     position: static;
-    width: 100%;
+    max-width: 1600px;
 }
 
 #write.first-line-indent li {
     margin-left: 1rem;
+}
+
+/* 源码视图 */
+#typora-source {
+    font-family: var(--font-code);
 }
 
 /* content */
@@ -139,8 +143,7 @@ p > .md-image:only-child:not(.md-img-error) img {
 /* code */
 code {
     padding: 0.2rem 0.4rem;
-    border: 1px solid var(--border-code);
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    background: #E6ECF1;
     font-family: var(--font-code);
     font-size: 0.9rem;
     border-radius: 0.2rem;
@@ -158,6 +161,8 @@ code {
 .CodeMirror.cm-s-inner {
     padding: 1rem;
     border-radius: 0.3rem;
+    line-height: 1.5rem;
+    font-size: 16px;
 }
 
 .md-fences .code-tooltip {
