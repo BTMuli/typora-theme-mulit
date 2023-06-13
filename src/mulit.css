@@ -2,7 +2,7 @@
  * @file mulit.css
  * @description 主题文件
  * @author BTMuli <bt-muli@outlook.com>
- * @since 2023-06-11
+ * @since 2023-06-12
  */
 
 /* 字体文件 */
@@ -137,8 +137,8 @@ blockquote {
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
 }
 
-p > .md-image:only-child:not(.md-img-error) img {
-    margin-left: 2rem;
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img {
+    left: 0;
 }
 
 /* code */
