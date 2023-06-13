@@ -13,7 +13,7 @@
 /* root */
 :root {
     /* 字体 */
-    --font-title: "Genshin", serif;
+    --font-title: "JetBrains Mono", "Genshin", serif;
     --font-text: "JetBrains Mono", "Genshin-Light", sans-serif;
     /* 背景 */
     --bg-box: #F5F7F9;
@@ -149,8 +149,8 @@ sup.md-footnote {
 }
 
 .md-def-name {
-    padding-left: 1.5ch;
-    padding-right: 1.5ch;
+    padding-left: 2ch;
+    padding-right: 3ch;
 }
 
 /* mermaid 预览 */
