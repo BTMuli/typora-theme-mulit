@@ -4,10 +4,15 @@
  * @see https://github.com/one-dark/jetbrains-one-dark-theme
  * @see https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark
  * @author BTMuli <bt-muli@outlook.com>
- * @since 2023-06-11
+ * @since 2023-06-13
  */
 
+@import "fonts.css";
+
 :root {
+    /* font */
+    --code-font: "JetBrains Mono", "Genshin-Light", sans-serif;
+    --code-font-italic: "JetBrains Mono Italic", "Genshin-Light", sans-serif;
     /* vscode */
     --code-vscode-blue: #61AFEF;
     --code-vscode-green: #98C379;
@@ -40,6 +45,42 @@
     --code-color-red: var(--code-jetbrains-red);
     --code-color-white-1: var(--code-jetbrains-white);
     --code-color-white-2: var(--code-vscode-white);
+}
+
+/* 代码块 */
+code {
+    padding: 0.2rem 0.4rem;
+    background: #E6ECF1;
+    font-family: var(--code-font);
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    margin: 0 0.2rem;
+}
+
+/* 代码块 */
+.CodeMirror pre {
+    font-family: var(--code-font);
+}
+
+/* 代码块 */
+.md-fences-adv-panel {
+    font-family: var(--code-font);
+}
+
+/* 代码块 */
+.CodeMirror.cm-s-inner {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    line-height: 1.5rem;
+    font-size: 14px;
+}
+
+/* 代码块语言提示 */
+#write .code-tooltip {
+    font-family: var(--code-font);
+    padding: 0 5px;
+    bottom: 0;
+    background: var(--bg-code-lang);
 }
 
 /* 源代码视图 */
@@ -87,6 +128,7 @@
 /* 注释 */
 .cm-s-inner span.cm-comment {
     color: var(--code-color-white-2) !important;
+    font-family: var(--code-font-italic);
 }
 
 /* def 定义 */
@@ -103,6 +145,7 @@
 /* keyword 关键字 */
 .cm-s-inner span.cm-keyword {
     color: var(--code-color-purple) !important;
+    font-family: var(--code-font-italic);
 }
 
 /* property 属性 */
@@ -113,6 +156,7 @@
 /* type 类型 */
 .cm-s-inner span.cm-type {
     color: var(--code-color-purple) !important;
+    font-family: var(--code-font-italic);
 }
 
 /* variable 变量 */

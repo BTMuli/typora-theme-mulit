@@ -2,7 +2,7 @@
  * @file mulit fonts.css
  * @description 字体文件
  * @author BTMuli <bt-muli@outlook.com>
- * @since 2023-06-11
+ * @since 2023-06-13
  */
 
 @font-face {
@@ -16,6 +16,11 @@
 }
 
 @font-face {
-    font-family: "Consolas";
-    src: url("consolas.ttf") format("truetype");
+    font-family: "JetBrains Mono";
+    src: url("JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "JetBrains Mono Italic";
+    src: url("JetBrainsMono-Italic.ttf") format("truetype");
 }

@@ -2,7 +2,7 @@
  * @file mulit.css
  * @description 主题文件
  * @author BTMuli <bt-muli@outlook.com>
- * @since 2023-06-12
+ * @since 2023-06-13
  */
 
 /* 字体文件 */
@@ -14,8 +14,7 @@
 :root {
     /* 字体 */
     --font-title: "Genshin", serif;
-    --font-text: "Genshin-Light", sans-serif;
-    --font-code: "Consolas", "Genshin-Light", sans-serif;
+    --font-text: "JetBrains Mono", "Genshin-Light", sans-serif;
     /* 背景 */
     --bg-box: #F5F7F9;
     --bg-code-lang: #3B4048;
@@ -49,11 +48,6 @@ body {
 
 #write.first-line-indent li {
     margin-left: 1rem;
-}
-
-/* 源码视图 */
-#typora-source {
-    font-family: var(--font-code);
 }
 
 /* content */
@@ -97,7 +91,7 @@ li::marker {
 
 /* front-matter */
 #write pre.md-meta-block {
-    font-family: var(--font-code);
+    font-family: var(--font-text);
     font-size: 14px;
     padding: 1rem;
     line-height: 1.45rem;
@@ -139,38 +133,6 @@ blockquote {
 
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img {
     left: 0;
-}
-
-/* code */
-code {
-    padding: 0.2rem 0.4rem;
-    background: #E6ECF1;
-    font-family: var(--font-code);
-    font-size: 0.9rem;
-    border-radius: 0.2rem;
-    margin: 0 0.2rem;
-}
-
-.CodeMirror pre {
-    font-family: var(--font-code);
-}
-
-.md-fences-adv-panel {
-    font-family: var(--font-code);
-}
-
-.CodeMirror.cm-s-inner {
-    padding: 1rem;
-    border-radius: 0.3rem;
-    line-height: 1.5rem;
-    font-size: 14px;
-}
-
-#write .code-tooltip {
-    font-family: var(--font-code);
-    padding: 0 5px;
-    bottom: 0;
-    background: var(--bg-code-lang);
 }
 
 /* foot-note */
