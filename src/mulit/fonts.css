@@ -24,3 +24,8 @@
     font-family: "JetBrains Mono Italic";
     src: url("JetBrainsMono-Italic.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "JetBrains Mono Bold";
+    src: url("JetBrainsMono-Bold.ttf") format("truetype");
+}

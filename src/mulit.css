@@ -15,9 +15,13 @@
     /* 字体 */
     --font-title: "JetBrains Mono", "Genshin", serif;
     --font-text: "JetBrains Mono", "Genshin-Light", sans-serif;
+    --font-italic: "JetBrains Mono Italic", "Genshin-Light", sans-serif;
+    --font-bold: "JetBrains Mono Bold", "Genshin", serif;
     /* 背景 */
     --bg-box: #F5F7F9;
     --bg-code-lang: #3B4048;
+    --bg-table: #EFEFEF;
+    --bg-table-head: #ABB2BF;
     /* 文字 */
     --text-color: #282C34;
     --link-color: #41A5EE;
@@ -27,6 +31,7 @@
     --border-quote: #ABB2BF;
     --border-note: #FFFFFF;
     --border-code: #959595;
+    --border-table: #21252B;
     --li-mark-color: #5098F6;
 }
 
@@ -87,6 +92,25 @@ li::marker {
     color: var(--li-mark-color);
     font-family: var(--font-title);
     font-size: 16px;
+}
+
+/* 倾斜 */
+em {
+    font-family: var(--font-italic);
+    font-style: italic;
+}
+
+/* 加粗 */
+strong {
+    font-family: var(--font-bold);
+}
+
+/* 分隔线 */
+hr {
+    height: 1px;
+    background-color: var(--border-quote);
+    margin: 1rem 0;
+    width: 100%;
 }
 
 /* front-matter */
@@ -157,4 +181,31 @@ sup.md-footnote {
 .md-fences-adv-panel {
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
     border-radius: 0.5rem;
+}
+
+/* table 表格 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    overflow: auto;
+    margin: 1rem 0;
+    font-family: var(--font-text);
+    font-size: 16px;
+    text-align: center;
+}
+
+table th {
+    font-family: var(--font-title);
+    background: var(--bg-table-head);
+}
+
+table th,
+table td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-table);
+}
+
+table tr:nth-child(2n) {
+    background-color: var(--bg-table);
 }
