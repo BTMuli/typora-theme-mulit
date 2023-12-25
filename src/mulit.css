@@ -2,7 +2,7 @@
  * @file mulit.css
  * @description 主题文件
  * @author BTMuli <bt-muli@outlook.com>
- * @since 2023-06-13
+ * @since 2023-12-25
  */
 
 /* 字体文件 */
@@ -61,6 +61,7 @@ h1 {
     font-family: var(--font-title);
     text-align: center;
     border-bottom: 1px solid var(--border-title);
+    font-weight: normal;
 }
 
 h2,
@@ -71,6 +72,7 @@ h4 {
     border-left: 4px solid var(--border-title);
     padding-left: 1rem;
     border-radius: 0.3rem;
+    font-weight: normal;
 }
 
 p {
