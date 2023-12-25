@@ -6,9 +6,14 @@
 
 import * as chokidar from "chokidar";
 import loadTheme from "../utils/loadTheme";
+import { path } from "app-root-path";
 
-const watcher = chokidar.watch("../src", {
+const watcher = chokidar.watch(path + "/src", {
   persistent: true,
+});
+
+watcher.on("all", (event, path) => {
+  console.log(event, path);
 });
 
 watcher.on("change", (path) => {
