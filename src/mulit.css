@@ -109,6 +109,7 @@ em {
 /* 加粗 */
 strong {
   font-family: var(--font-bold);
+  font-weight: normal;
 }
 
 /* 分隔线 */
