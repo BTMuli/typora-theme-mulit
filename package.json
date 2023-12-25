@@ -1,0 +1,40 @@
+{
+  "name": "typora-theme-mulit",
+  "version": "1.0.0",
+  "description": "A Typora theme for personal use by BTMuli",
+  "packageManager": "pnpm@8.12.1",
+  "scripts": {
+    "pretty": "prettier --write .",
+    "stylelint": "stylelint --fix \"src/**/*.css\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.css": "stylelint --fix",
+    "*.{css,json,yml}": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BTMuli/typora-theme-mulit.git"
+  },
+  "keywords": [
+    "Typora",
+    "Theme",
+    "BTMuli"
+  ],
+  "author": "BTMuli <bt-muli@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BTMuli/typora-theme-mulit/issues"
+  },
+  "homepage": "https://github.com/BTMuli/typora-theme-mulit#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "oxlint": "^0.0.22",
+    "prettier": "^3.1.1",
+    "stylelint": "^16.0.2",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-order": "^6.0.4"
+  }
+}

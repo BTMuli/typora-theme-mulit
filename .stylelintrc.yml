@@ -1,0 +1,9 @@
+extends:
+  - stylelint-config-standard
+  - stylelint-order
+  - stylelint-config-idiomatic-order
+plugins:
+  - stylelint-order
+rules:
+  # selector-class-pattern 关闭
+  selector-class-pattern: null
