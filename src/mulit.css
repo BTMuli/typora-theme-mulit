@@ -14,8 +14,8 @@
 /* root */
 :root {
   /* 字体 */
-  --font-title: "JetBrains Mono", "Genshin", serif;
-  --font-text: "JetBrains Mono", "Genshin-Light", sans-serif;
+  --font-title: "Genshin", "JetBrains Mono", serif;
+  --font-text: "Genshin-Light", "JetBrains Mono", sans-serif;
   --font-italic: "JetBrains Mono Italic", "Genshin-Light", sans-serif;
   --font-bold: "JetBrains Mono Bold", "Genshin", serif;
 
@@ -167,6 +167,16 @@ blockquote {
 }
 
 /* foot-note */
+.footnotes {
+  padding-top: 5px;
+  border-top: 1px dotted var(--code-color-white-2);
+}
+
+.footnotes + .footnotes {
+  padding-top: 0;
+  border-top: 0;
+}
+
 sup.md-footnote {
   margin-left: 0.3rem;
   background: linear-gradient(145deg, #cfd6dc, #f6ffff);
@@ -177,13 +187,17 @@ sup.md-footnote {
   font-family: var(--font-title);
 }
 
-.md-def-footnote {
-  font-family: var(--font-title);
+.md-def-name {
+  padding-right: 1ch;
+  padding-left: 1.5ch;
 }
 
-.md-def-name {
-  padding-right: 3ch;
-  padding-left: 2ch;
+.md-def-name::after {
+  content: "]:";
+}
+
+.md-def-content {
+  color: var(--code-vscode-blue);
 }
 
 /* mermaid 预览 */
