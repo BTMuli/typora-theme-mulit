@@ -4,6 +4,7 @@
   "description": "A Typora theme for personal use by BTMuli",
   "packageManager": "pnpm@8.12.1",
   "scripts": {
+    "dev": "tsx scripts/dev.ts",
     "load": "tsx scripts/load.ts",
     "pretty": "prettier --write .",
     "stylelint": "stylelint --fix \"src/**/*.css\"",
