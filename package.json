@@ -4,13 +4,14 @@
   "description": "A Typora theme for personal use by BTMuli",
   "packageManager": "pnpm@8.12.1",
   "scripts": {
+    "load": "tsx scripts/load.ts",
     "pretty": "prettier --write .",
     "stylelint": "stylelint --fix \"src/**/*.css\"",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.css": "stylelint --fix",
-    "*.{css,json,yml}": "prettier --write"
+    "*.{css,json,yml,ts}": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
   },
   "homepage": "https://github.com/BTMuli/typora-theme-mulit#readme",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.5",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "oxlint": "^0.0.22",
@@ -35,6 +38,13 @@
     "stylelint": "^16.0.2",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-standard": "^35.0.0",
-    "stylelint-order": "^6.0.4"
+    "stylelint-order": "^6.0.4",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "app-root-path": "^3.1.0",
+    "chokidar": "^3.5.3",
+    "fs-extra": "^11.2.0",
+    "tsx": "^4.7.0"
   }
 }
