@@ -6,208 +6,214 @@
  */
 
 /* 字体文件 */
-@import "mulit/fonts.css";
+@import url("mulit/fonts.css");
+
 /* 代码高亮主题文件 */
-@import "mulit/code-onedark.css";
+@import url("mulit/code-onedark.css");
 
 /* root */
 :root {
-    /* 字体 */
-    --font-title: "JetBrains Mono", "Genshin", serif;
-    --font-text: "JetBrains Mono", "Genshin-Light", sans-serif;
-    --font-italic: "JetBrains Mono Italic", "Genshin-Light", sans-serif;
-    --font-bold: "JetBrains Mono Bold", "Genshin", serif;
-    /* 背景 */
-    --bg-box: #F5F7F9;
-    --bg-code-lang: #3B4048;
-    --bg-table: #EFEFEF;
-    --bg-table-head: #ABB2BF;
-    /* 文字 */
-    --text-color: #282C34;
-    --link-color: #41A5EE;
-    --note-color: #21252B;
-    /* border */
-    --border-title: #323844;
-    --border-quote: #ABB2BF;
-    --border-note: #FFFFFF;
-    --border-code: #959595;
-    --border-table: #21252B;
-    --li-mark-color: #5098F6;
+  /* 字体 */
+  --font-title: "JetBrains Mono", "Genshin", serif;
+  --font-text: "JetBrains Mono", "Genshin-Light", sans-serif;
+  --font-italic: "JetBrains Mono Italic", "Genshin-Light", sans-serif;
+  --font-bold: "JetBrains Mono Bold", "Genshin", serif;
+
+  /* 背景 */
+  --bg-box: #f5f7f9;
+  --bg-code-lang: #3b4048;
+  --bg-table: #efefef;
+  --bg-table-head: #abb2bf;
+
+  /* 文字 */
+  --text-color: #282c34;
+  --link-color: #41a5ee;
+  --note-color: #21252b;
+
+  /* border */
+  --border-title: #323844;
+  --border-quote: #abb2bf;
+  --border-note: #fff;
+  --border-code: #959595;
+  --border-table: #21252b;
+  --li-mark-color: #5098f6;
 }
 
 /* body */
 body {
-    color: #282C34;
-    height: 100%;
-    font-family: var(--font-text);
+  height: 100%;
+  color: #282c34;
+  font-family: var(--font-text);
 }
 
 /* 编辑区域 */
 #write {
-    font-size: 16px;
-    margin: 1rem auto 0;
-    padding: 30px 30px 100px;
-    position: static;
-    max-width: 1600px;
+  position: static;
+  max-width: 1600px;
+  padding: 30px 30px 100px;
+  margin: 1rem auto 0;
+  font-size: 16px;
 }
 
 #write.first-line-indent li {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 /* content */
 h1 {
-    line-height: 1.5;
-    font-family: var(--font-title);
-    text-align: center;
-    border-bottom: 1px solid var(--border-title);
-    font-weight: normal;
+  border-bottom: 1px solid var(--border-title);
+  font-family: var(--font-title);
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
 }
 
 h2,
 h3,
 h4 {
-    line-height: 1.5;
-    font-family: var(--font-title);
-    border-left: 4px solid var(--border-title);
-    padding-left: 1rem;
-    border-radius: 0.3rem;
-    font-weight: normal;
+  padding-left: 1rem;
+  border-radius: 0.3rem;
+  border-left: 4px solid var(--border-title);
+  font-family: var(--font-title);
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 a {
-    color: var(--link-color);
-    text-decoration: none !important;
-    transition-duration: 0.3s;
+  color: var(--link-color);
+  text-decoration: none !important;
+  transition-duration: 0.3s;
 }
 
 a:hover {
-    color: var(--link-color);
-    text-decoration: underline !important;
+  color: var(--link-color);
+  text-decoration: underline !important;
 }
 
 li::marker {
-    color: var(--li-mark-color);
-    font-family: var(--font-title);
-    font-size: 16px;
+  color: var(--li-mark-color);
+  font-family: var(--font-title);
+  font-size: 16px;
 }
 
 /* 倾斜 */
 em {
-    font-family: var(--font-italic);
-    font-style: italic;
+  font-family: var(--font-italic);
+  font-style: italic;
 }
 
 /* 加粗 */
 strong {
-    font-family: var(--font-bold);
+  font-family: var(--font-bold);
 }
 
 /* 分隔线 */
 hr {
-    height: 1px;
-    background-color: var(--border-quote);
-    margin: 1rem 0;
-    width: 100%;
+  width: 100%;
+  height: 1px;
+  margin: 1rem 0;
+  background-color: var(--border-quote);
 }
 
 /* front-matter */
 #write pre.md-meta-block {
-    font-family: var(--font-text);
-    font-size: 14px;
-    padding: 1rem;
-    line-height: 1.45rem;
-    background-color: var(--bg-box);
-    border: 0;
-    border-radius: 0.3rem;
-    color: var(--text-color);
+  padding: 1rem;
+  border: 0;
+  border-radius: 0.3rem;
+  background-color: var(--bg-box);
+  color: var(--text-color);
+  font-family: var(--font-text);
+  font-size: 14px;
+  line-height: 1.45rem;
 }
 
 /* TOC */
 .md-toc-h2 .md-toc-inner {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .md-toc-h3 .md-toc-inner {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .md-toc-h4 .md-toc-inner {
-    margin-left: 3rem;
+  margin-left: 3rem;
 }
 
 /* block-quote */
 blockquote {
-    width: 100%;
-    background-color: var(--bg-box);
-    border-left: 4px solid var(--border-quote);
-    border-radius: 0.3rem;
-    padding: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border-left: 4px solid var(--border-quote);
+  background-color: var(--bg-box);
 }
 
 /* img ![]() */
 .md-image {
-    max-width: 96%;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  max-width: 96%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px 5px rgb(0 0 0 / 40%);
 }
 
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img {
-    left: 0;
+  left: 0;
 }
 
 /* foot-note */
 sup.md-footnote {
-    margin-left: 0.3rem;
-    background: linear-gradient(145deg, #cfd6dc, #f6ffff);
-    box-shadow: 3px 3px 6px #c4cacf, -3px -3px 6px #ffffff;
-    color: var(--note-color);
-    font-family: var(--font-title);
+  margin-left: 0.3rem;
+  background: linear-gradient(145deg, #cfd6dc, #f6ffff);
+  box-shadow:
+    3px 3px 6px #c4cacf,
+    -3px -3px 6px #fff;
+  color: var(--note-color);
+  font-family: var(--font-title);
 }
 
 .md-def-footnote {
-    font-family: var(--font-title);
+  font-family: var(--font-title);
 }
 
 .md-def-name {
-    padding-left: 2ch;
-    padding-right: 3ch;
+  padding-right: 3ch;
+  padding-left: 2ch;
 }
 
 /* mermaid 预览 */
 .md-fences-adv-panel {
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px 5px rgb(0 0 0 / 40%);
 }
 
 /* table 表格 */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    overflow: auto;
-    margin: 1rem 0;
-    font-family: var(--font-text);
-    font-size: 16px;
-    text-align: center;
+  overflow: auto;
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: var(--font-text);
+  font-size: 16px;
+  text-align: center;
 }
 
 table th {
-    font-family: var(--font-title);
-    background: var(--bg-table-head);
+  background: var(--bg-table-head);
+  font-family: var(--font-title);
 }
 
 table th,
 table td {
-    padding: 6px 13px;
-    border: 1px solid var(--border-table);
+  padding: 6px 13px;
+  border: 1px solid var(--border-table);
 }
 
 table tr:nth-child(2n) {
-    background-color: var(--bg-table);
+  background-color: var(--bg-table);
 }
