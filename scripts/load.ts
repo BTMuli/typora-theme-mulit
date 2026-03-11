@@ -5,14 +5,11 @@
  */
 
 import * as fs from "fs-extra";
-import * as os from "os";
 import getThemeDir from "../utils/getThemeDir";
 import { path } from "app-root-path";
 
-// 获取当前系统类型
-const platform = os.platform();
 // 如果是 windows 系统
-const themeDir = getThemeDir(platform);
+const themeDir = getThemeDir();
 if (!themeDir) {
   console.log("当前系统不支持");
   process.exit(1);

@@ -11,16 +11,15 @@ import * as os from "node:os";
  * @since 1.0.0
  * @function getThemeDir
  * @see https://support.typoraio.cn/About-Themes/
- * @param {string} platform - 当前系统类型
  * @returns {string|false} 主题目录
  */
-export default function getThemeDir(platform: string): string | false {
+export default function getThemeDir(): string | false {
   // 如果是 windows 系统
-  if (platform === "win32") {
+  if (os.platform() === "win32") {
     return os.homedir() + "\\AppData\\Roaming\\Typora\\themes";
   }
   // 如果是 mac 系统
-  if (platform === "darwin") {
+  if (os.platform() === "darwin") {
     return (
       os.homedir() + "/Library/Application Support/abnerworks.Typora/themes/"
     );

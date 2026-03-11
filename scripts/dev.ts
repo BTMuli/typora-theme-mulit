@@ -7,6 +7,10 @@
 import * as chokidar from "chokidar";
 import loadTheme from "../utils/loadTheme";
 import { path } from "app-root-path";
+import getThemeDir from "../utils/getThemeDir";
+
+const themeDir = getThemeDir();
+if (themeDir) console.log(`themeDir ${themeDir}`);
 
 const watcher = chokidar.watch(path + "/src", {
   persistent: true,

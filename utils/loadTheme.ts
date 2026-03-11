@@ -16,8 +16,7 @@ import { path } from "app-root-path";
  * @returns {boolean} 是否加载成功
  */
 export default function loadTheme(): boolean {
-  const platform = os.platform();
-  const themeDir = getThemeDir(platform);
+  const themeDir = getThemeDir();
   if (!themeDir) return false;
   if (!fs.existsSync(themeDir)) return false;
   fs.copySync(path + "/src", themeDir, {
